@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#09152d"><meta name="description" content="سامانه مدیریت و داوری مناظره ARASH Debate">
+  <title>ARASH Debate | سامانه مناظره</title><link rel="icon" href="assets/arash-logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css"><script src="config.js"></script><script defer src="app.js"></script>
+</head>
+<body>
+<header class="topbar"><a class="brand" href="#home"><img src="assets/arash-logo.png" alt="نشان آرش"><span><b>ARASH</b><small>DEBATE PLATFORM</small></span></a><nav id="mainNav"><a href="#home">خانه</a><a href="#results">نتایج</a><a href="#guide">راهنما</a><a href="#about">درباره</a></nav><div class="top-actions"><span id="connectionState" class="connection">در حال بررسی اتصال</span><button id="loginOpen" class="btn btn-gold">ورود کاربران</button><button id="logoutBtn" class="btn btn-outline hidden">خروج</button><button id="mobileToggle" class="mobile-toggle">☰</button></div></header>
+<main>
+<section id="home" class="hero"><div class="hero-copy"><span class="eyebrow">اندیشه، گفت‌وگو، استدلال</span><h1>قدرت اندیشه،<br><em>هنر گفت‌وگو</em></h1><p>سامانه یکپارچه برگزاری مناظره، مدیریت گروه‌ها، ارزیابی تیمی و امتیازدهی فردی با همگام‌سازی زنده.</p><div class="hero-actions"><a class="btn btn-gold" href="#results">مشاهده نتایج</a><a class="btn btn-outline" href="#guide">شیوه‌نامه ارزیابی</a></div></div><div class="hero-art"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><img src="assets/arash-logo.png" alt="نشان آرش"></div></section>
+<section class="section intro-grid"><div><span class="eyebrow">ARASH DEBATE</span><h2>مناظره‌ای ساختارمند و شفاف</h2><p class="muted">تمام مراحل از تعریف گروه‌ها و اعضا تا تخصیص نقش‌ها، ثبت امتیاز داوران و انتشار نتایج در یک محیط واحد مدیریت می‌شود.</p></div><div class="stat-grid"><article class="stat"><b>۵</b><span>داور مستقل</span></article><article class="stat"><b>۱۰</b><span>امتیاز فردی</span></article><article class="stat"><b>۱۰۰</b><span>امتیاز تیمی</span></article></div></section>
+<section id="results" class="section"><div class="section-head"><div><span class="eyebrow">RESULTS</span><h2>نتایج رسمی</h2></div><span class="muted" id="resultCaption">پس از انتشار توسط مدیر نمایش داده می‌شود</span></div><div class="tabs"><button class="tab active" data-result-tab="team">رتبه‌بندی تیمی</button><button class="tab" data-result-tab="individual">امتیازهای فردی</button></div><div id="publicResults" class="panel table-wrap"><p class="empty">هنوز نتیجه‌ای منتشر نشده است.</p></div></section>
+<section id="guide" class="section"><div class="section-head"><div><span class="eyebrow">SCORING</span><h2>چارچوب ارزیابی</h2></div></div><div class="guide-grid"><article class="panel"><h3>امتیازدهی تیمی · از ۱۰۰</h3><div id="teamRubric"></div></article><article class="panel"><h3>امتیازدهی فردی · از ۱۰</h3><p class="muted">هر یک از پنج داور به عملکرد هر فرد امتیازی از ۰ تا ۱۰ با دقت یک‌دهم می‌دهد. امتیاز نهایی فرد، میانگین امتیازهای ثبت‌شده پنج داور است.</p><div class="score-scale"><b>۰٫۰</b><span>گام امتیازدهی: ۰٫۱</span><b>۱۰٫۰</b></div></article></div></section>
+<section id="about" class="section about"><span class="eyebrow">ABOUT ARASH</span><h2>گفت‌وگو برای رسیدن به فهم بهتر</h2><p class="muted">ARASH Debate بستری برای مناظره منصفانه، سنجش استدلال و ثبت شفاف عملکرد فردی و گروهی است.</p></section>
+<section id="workspace" class="section workspace hidden"><div class="section-head"><div><span class="eyebrow">CONTROL CENTER</span><h2 id="workspaceTitle">پنل کاربری</h2></div><span id="roleBadge" class="role-badge"></span></div><div id="workspaceContent"></div></section>
+</main>
+<footer><span>© ARASH Debate</span><span>اندیشه آزاد، داوری منصفانه</span></footer>
+<div id="loginModal" class="modal hidden"><div class="modal-card"><button id="loginClose" class="modal-close">×</button><span class="eyebrow">SECURE ACCESS</span><h2>ورود به سامانه</h2><form id="loginForm"><label>نام کاربری<input id="loginId" autocomplete="username" required></label><label>گذرواژه<input id="loginPassword" type="password" autocomplete="current-password" required></label><button class="btn btn-gold full" type="submit">ورود امن</button></form><p class="muted tiny">حروف بزرگ و کوچک نام کاربری دقیقاً مطابق حساب تعریف‌شده بررسی می‌شوند.</p><div id="demoAccess" class="demo-access hidden"><hr><p>حالت پیش‌نمایش محلی</p><button data-demo-role="admin" class="btn btn-outline">مدیر آزمایشی</button><button data-demo-role="judge" class="btn btn-outline">داور آزمایشی</button></div></div></div>
+<div id="toast" class="toast"></div>
+</body></html>
